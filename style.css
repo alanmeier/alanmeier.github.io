@@ -4,19 +4,37 @@
 @media screen and (min-width: 960px) {
   html, body { 
     background-image: url(wider.jpg); 
-    background-color: black;
+    background-color: darkgray;
+  }
+  .Description {
+    width: 60%;
+    height: 100%;
+    font-size: 1.0em;
+    flex-shrink: 10;
   }
 }
 @media screen and (min-width: 450px) and (max-width: 959px) {
   html, body { 
     background-image: url(middle.jpg); 
-    background-color: black;
+    background-color: darkgray;
+  }
+  .Description {
+    width: 70%;
+    height: 100%;
+    font-size: 0.9em;
+    flex-shrink: 10;
   }
 }
 @media screen and (max-width: 449px) {
   html, body { 
     background-image: url(twentybynine.jpg); 
-    background-color: black;
+    background-color: darkgray;
+  }
+  .Description {
+    font-size: 0.7em;
+    height: 100%;
+    width: 90%;
+    flex-shrink: 10;
   }
 }
 
@@ -113,12 +131,7 @@ h1, a, p, div, h2 {
 flex-shrink: 10;
   }
 
-.Description {
-  width: 50%;
-  height: 100%;
-  font-size: 0.9em;
-  flex-shrink: 10;
-}
+
 
 
 .BoxesHouses {
@@ -128,7 +141,7 @@ flex-shrink: 10;
 
 
 /* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
 
   .Footer {
     font-family: "icomoon";
@@ -141,12 +154,7 @@ flex-shrink: 10;
     font-size: 1.125em;
   }
 
-  .Description {
-    font-size: 0.7em;
-    height: 100%;
-    width: 80%;
-    flex-shrink: 10;
-  }
+
 }
 
 .Spacer {
