@@ -1,0 +1,153 @@
+
+
+
+@media screen and (min-width: 960px) {
+  html, body { 
+    background-image: url(wider.jpg); 
+    background-color: blue;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 959px) {
+  html, body { 
+    background-image: url(middle.jpg); 
+  }
+}
+@media screen and (max-width: 449px) {
+  html, body { 
+    background-image: url(twentybynine.jpg); 
+  }
+}
+
+
+
+html, body { 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size:100%;
+  background-position: center center;
+  min-height: 100vh;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.Container {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction:  column;
+  flex-direction:  column;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  justify-content: end;
+}
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?onlqam');
+  src:  url('fonts/icomoon.eot?onlqam#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?onlqam') format('truetype'),
+    url('fonts/icomoon.woff?onlqam') format('woff'),
+    url('fonts/icomoon.svg?onlqam#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-unearthedlogonew_400x400.jpg:before {
+  content: "\e900";
+}
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-spotify:before {
+  content: "\ea94";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-soundcloud:before {
+  content: "\eac3";
+}
+
+h1 {font-size: 2.75em;} 
+
+
+h1, a, p, div, h2 {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+
+
+.Footer {
+    font-family: "icomoon";
+    font-size: 1em;
+    padding-bottom: 20px;
+    white-space: nowrap;
+flex-shrink: 10;
+  }
+
+.Description {
+  width: 50%;
+  height: 100%;
+  font-size: 0.9em;
+  flex-shrink: 10;
+}
+
+
+.BoxesHouses {
+  font-size: 1.7em;
+}
+
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 450px) {
+
+  .Footer {
+    font-family: "icomoon";
+    font-size: 0.8em;
+    white-space: nowrap;
+    flex-shrink: 10;
+  }
+
+  .BoxesHouses {
+    font-size: 1.125em;
+  }
+
+  .Description {
+    font-size: 0.7em;
+    height: 100%;
+    width: 80%;
+    flex-shrink: 10;
+  }
+}
+
+.Spacer {
+ height: 100%;
+ flex-grow: 100;
+}
