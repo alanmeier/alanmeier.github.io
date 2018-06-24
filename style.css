@@ -4,17 +4,19 @@
 @media screen and (min-width: 960px) {
   html, body { 
     background-image: url(wider.jpg); 
-    background-color: blue;
+    background-color: black;
   }
 }
 @media screen and (min-width: 450px) and (max-width: 959px) {
   html, body { 
     background-image: url(middle.jpg); 
+    background-color: black;
   }
 }
 @media screen and (max-width: 449px) {
   html, body { 
     background-image: url(twentybynine.jpg); 
+    background-color: black;
   }
 }
 
