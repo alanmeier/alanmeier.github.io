@@ -4,7 +4,6 @@
 @media screen and (min-width: 960px) {
   html, body { 
     background-image: url(wider.jpg); 
-    background-color: darkgray;
   }
   .Description {
     width: 60%;
@@ -16,7 +15,6 @@
 @media screen and (min-width: 450px) and (max-width: 959px) {
   html, body { 
     background-image: url(middle.jpg); 
-    background-color: darkgray;
   }
   .Description {
     width: 70%;
@@ -28,7 +26,6 @@
 @media screen and (max-width: 449px) {
   html, body { 
     background-image: url(twentybynine.jpg); 
-    background-color: darkgray;
   }
   .Description {
     font-size: 0.7em;
@@ -51,6 +48,7 @@ html, body {
   background-attachment: fixed;
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 
 .Container {
