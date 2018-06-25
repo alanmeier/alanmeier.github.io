@@ -12,7 +12,9 @@
     flex-shrink: 10;
   }
 }
-@media screen and (min-width: 450px) and (max-width: 959px) {
+
+
+@media screen and (min-width: 500px) and (max-width: 959px) {
   html, body { 
     background-image: url(middle.jpg); 
   }
@@ -23,14 +25,16 @@
     flex-shrink: 10;
   }
 }
-@media screen and (max-width: 449px) {
+
+
+@media screen and (max-width: 499px) {
   html, body { 
     background-image: url(twentybynine.jpg); 
   }
   .Description {
-    font-size: 0.7em;
+    font-size: 0.8em;
     height: 100%;
-    width: 90%;
+    width: 80%;
     flex-shrink: 10;
   }
 }
