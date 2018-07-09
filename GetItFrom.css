@@ -1,0 +1,88 @@
+
+ @media only screen and (max-device-width: 480px), screen and (max-width: 799px) {
+     .metadata {
+         display: none;
+     }
+
+     .metadata--mobile {
+         display: block;
+     }
+
+     #content .metadata.metadata--mobile img {
+         margin: 0 auto 15px auto;
+     }
+ }
+
+ table.center {
+    margin: 0 auto;
+}
+
+hr {
+    width: 700px;
+    margin: 0 auto;
+    height: 2PX;
+    background-color: black;
+}
+
+ .youtube-container {
+    border: 8px solid #f0f0f0;
+    display: inline-block; }
+    .youtube-container iframe {
+      display: block; 
+    }
+    .iframe {
+        display: block; 
+        height: 386px;
+        width: 700px;
+        margin: 0 auto;
+    }
+
+ @media screen and (max-width: 760px) {
+      .youtube-container {
+        border-width: 8px;
+        margin-bottom: 15px; 
+    }
+    .iframe {
+        display: block;
+        height: 170px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    hr {
+        width: 300px;
+        margin: 0 auto;
+        background-color: black;
+        height: 2px;
+    }
+  }
+
+ 
+
+
+  	.hoverTable{
+		width:300px; 
+        border-collapse: collapse; 
+        border: 1px solid black;
+
+        /* This centrers he table */
+        margin: 0 auto;
+	}
+    
+    td { 
+        border:black 1px solid;
+        height: 76px;
+        vertical-align: middle;
+        text-align: center;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+
+        background: #f3f4f8;
+        cursor: default;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color:   #fff;
+          cursor:pointer;
+    }
+
