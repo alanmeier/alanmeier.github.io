@@ -8,7 +8,7 @@
   .Description {
     width: 60%;
     height: 100%;
-    font-size: 1.0em;
+    font-size: 1.2em;
     flex-shrink: 10;
   }
 }
@@ -21,7 +21,7 @@
   .Description {
     width: 70%;
     height: 100%;
-    font-size: 0.9em;
+    font-size: 1.0em;
     flex-shrink: 10;
   }
 }
@@ -32,7 +32,7 @@
     background-image: url(twentybynine.jpg); 
   }
   .Description {
-    font-size: 0.8em;
+    font-size: 1.0em;
     height: 100%;
     width: 80%;
     flex-shrink: 10;
