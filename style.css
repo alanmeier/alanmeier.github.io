@@ -144,6 +144,9 @@ h1, a, p, div, h2 {
   font-size: 1.7em;
 }
 
+.Footer {
+  font-family: "icomoon";
+}
 
 
 /* Use a media query to add a breakpoint at 800px: */
