@@ -40,7 +40,6 @@
     height: 100%;
     width: 80%;
     flex-shrink: 10;
-    max-width: 600px;
   }
 }
 
