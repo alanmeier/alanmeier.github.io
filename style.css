@@ -124,16 +124,17 @@ h1 {font-size: 2.75em;}
 h1, a, p, div, h2 {
   color: white;
   text-align: center;
+  text-decoration: none;
 }
 
 
 
-.Footer {
+.h2 {
     font-family: "icomoon";
     font-size: 1em;
     padding-bottom: 20px;
     white-space: nowrap;
-flex-shrink: 10;
+    flex-shrink: 10;
   }
 
 
