@@ -12,7 +12,11 @@
                             x.className = "rc_nav";
                         }
                     }
-    
+                    function GetBrowser()
+                    {
+                        return  navigator ? navigator.userAgent.toLowerCase() : "safari";
+                    }
+                    var isSafari = GetBrowser();
     
     
             function playAudio(elementid) {
@@ -69,7 +73,7 @@
             <P><br><br><br><br><br><br>
                 <br></P>
             <p>
-                <img class="tkadm" src="TKADM.svg" alt="TO KILL A DEAD MAN" width=610 height=308></p> 
+                <img class="tkadm" src="TKADM.svg" alt="TO KILL A DEAD MAN" width=560 height=283></p> 
         </div>
         <div class="Spacer"></div>
  
