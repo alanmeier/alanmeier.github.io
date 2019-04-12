@@ -12,7 +12,7 @@
     border-spacing: 5px;
     margin: auto; 
     font-size: 1.1em;
-    font-family: TKADM-webfont, helvetica, sans-serif;
+    font-family: Trebuchet MS, Arial, helvetica, sans-serif;
   }
 
 .image {
@@ -20,8 +20,8 @@
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  width: 305px;
-  height: 154px;
+  width: 243px;
+  height: 123px;
 }
 
 
@@ -42,7 +42,7 @@
 
     /* Remove margins and padding from the list, and add a black background color */
     .contact {
-        font-family: TKADM-webfont, helvetica, sans-serif;
+        font-family: Arial, helvetica, sans-serif;
         font-size: 1.4em;
         color: black;
         text-align: center;
@@ -54,7 +54,7 @@
     .contact a:hover {color: #8B0000}
   
     html, body { 
-    font-family: TKADM-webfont, helvetica, sans-serif;
+    font-family: Trebuchet MS, Arial, helvetica, sans-serif;
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -85,8 +85,8 @@
    color: white;
    padding: 22px 22px;
    text-decoration: none;
-   font-family: Poppins;
-   font-size: 18px;
+   font-family: Trebuchet MS, Arial, helvetica, sans-serif;
+   font-size: 1.4em;
    -webkit-transition: background 0.3s linear;
    -moz-transition: background 0.3s linear;
    -ms-transition: background 0.3s linear;
