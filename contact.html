@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+        <script>
+                /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+                function myFunction() {
+                    var x = document.getElementById("centered_nav");
+                    if (x.className === "rc_nav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "rc_nav";
+                    }
+                }
+
+
+
+        function playAudio(elementid) {
+            var sounds = document.getElementsByTagName('audio');
+            for(i=0; i<sounds.length; i++) sounds[i].pause();
+
+            var audio1 = document.getElementById(elementid);
+            audio1.currentTime = 0;
+            audio1.play();
+        }
+
+        </script>
+
+        <meta name="google-site-verification" content="KNFkmCK8lU5Lu-sXMtPbyxL5QgPyGBX_inpFbcM8w6Q" />
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WB8QCPC');</script>
+        <!-- End Google Tag Manager -->
+  
+
+		<title>To Kill A Dead Man</title>
+        <link rel="stylesheet" href="tkadm.css"></link>
+		<meta name="ROBOTS" content="INDEX,FOLLOW">
+		<meta name="description" content="Needs description">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    
+
+
+	<body>
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB8QCPC"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+        <div class="rc_nav" id="centered_nav">
+                <a href="about.html"><b></b>ABOUT</b></a>
+                <a href="audioreel.html"><b></b>AUDIO REEL</b></a>
+                <a href="contact.html"><b></b><u>CONTACT</u></b></a>
+                <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+        <img class="image" src="TKADM.svg" alt="TO KILL A DEAD MAN">
+
+
+        <div class="contact_text">
+
+
+                <p class="contact">ALL ENQUIRIES<br>
+                    <a href="mailto:jess@tokilladeadman.com"  onmouseover="playAudio('MailSent');">jess@tokilladeadman.com</a><br><br>
+                    or say hi on social media<br>
+        
+                    <table style="width:240px">
+                            <tr><td onclick="location.href='https://www.instagram.com/2killadeadman/'" onmouseover="playAudio('Instagram');"><a class="contact" href="https://www.instagram.com/2killadeadman/">Instagram</a></td></tr>
+                            <tr><td onclick="location.href='https://www.facebook.com/tokilladeadman/'" onmouseover="playAudio('Facebook');"><a class="contact" href="https://www.facebook.com/tokilladeadman/">Facebook</a></td></tr>
+                            <tr><td onclick="location.href=''" onmouseover="playAudio('Youtube');"><a class="contact" href="">Youtube</a></td></tr>
+                            <tr><td onclick="location.href=''" onmouseover="playAudio('Vimeo');"><a class="contact" href="">Vimeo</a></td></tr>
+                            <tr><td onclick="location.href='https://soundcloud.com/user-817156474'" onmouseover="playAudio('Soundcloud');"><a class="contact" href="https://soundcloud.com/user-817156474">Soundcloud</a></td></tr>
+                         </table>
+                </p>
+        
+        </div>
+
+    <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
+
+    <audio controls autoplay hidden loop="" src="./audio/soundscape_about.wav" type ="audio/wav"">your browser does not support Html5</audio>
+ 
+    <audio controls autoplay hidden loop="" src="./audio/soundscape_about.wav" type ="audio/wav"">your browser does not support Html5</audio>
+
+    <audio controls  preload="auto"  hidden id="MailSent" src="./audio/MailSent.m4a" type ="audio/m4a"">your browser does not support Html5</audio>
+    <audio controls  preload="auto"  hidden id="Youtube" src="./audio/Youtube.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
+    <audio controls  preload="auto"  hidden id="Soundcloud" src="./audio/Soundcloud.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
+    <audio controls  preload="auto"  hidden id="Facebook" src="./audio/Facebook.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
+    <audio controls  preload="auto"  hidden id="Instagram" src="./audio/Instagram.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
+    <audio controls  preload="auto"  hidden id="Vimeo" src="./audio/Vimeo.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
+
+</body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122642417-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122642417-1');
+</script>
+</html>

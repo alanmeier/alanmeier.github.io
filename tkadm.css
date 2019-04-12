@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "TKADM-webfont";
+    src: url("TKADM-webfont.woff");
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    border-color: lightgrey;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+    border-spacing: 5px;
+    margin: auto; 
+    font-size: 1.1em;
+    font-family: TKADM-webfont, helvetica, sans-serif;
+  }
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  width: 305px;
+  height: 154px;
+}
+
+
+  contact_text {
+    margin: auto;
+    text-align: center;
+    align-content: center;
+  }
+
+  a
+  {
+      text-decoration: none;
+  }
+  td:hover {
+    background-color: lightgray;
+    color: #000000;
+  }
+
+    /* Remove margins and padding from the list, and add a black background color */
+    .contact {
+        font-family: TKADM-webfont, helvetica, sans-serif;
+        font-size: 1.4em;
+        color: black;
+        text-align: center;
+        align-content: center;
+        text-decoration: none;
+        hover:
+    }
+
+    .contact a:hover {color: #8B0000}
+  
+    html, body { 
+    font-family: TKADM-webfont, helvetica, sans-serif;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    align-content: center;
+  }
+
+
+  
+.about {
+    width: 340px;
+    margin: auto;
+  }
+
+
+
+
+  .rc_nav {
+    overflow: hidden;
+    text-align: center;
+    z-index: 6;
+  }
+  
+  .rc_nav a {
+   display: inline-block;
+   margin-right: -4px;  /* inline-block gap fix */
+   color: white;
+   padding: 22px 22px;
+   text-decoration: none;
+   font-family: Poppins;
+   font-size: 18px;
+   -webkit-transition: background 0.3s linear;
+   -moz-transition: background 0.3s linear;
+   -ms-transition: background 0.3s linear;
+   -o-transition: background 0.3s linear;
+   transition: background 0.3s linear;
+   z-index: 9;
+  }
+  
+  /*
+  .rc_nav a:hover {
+    background-color: #575b69;
+    color: #bdfe0e2;
+  }
+  */
+  
+  .rc_nav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .rc_nav a {display: none;}
+    .rc_nav a.icon {
+      float: right;
+      display: block;
+      width: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .rc_nav.responsive {position: relative; }
+    .rc_nav.responsive .icon {
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+    .rc_nav.responsive a {
+      float: none;
+      display: block;
+      text-align: center;
+    }
+  
+  }
