@@ -1,60 +1,50 @@
-@font-face {
-    font-family: "TKADM-webfont";
-    src: url("TKADM-webfont.woff");
-  }
-  
-  table, th, td {
-    border: 1px solid black;
-    border-color: lightgrey;
-    border-collapse: collapse;
-    padding: 8px;
-    text-align: center;
-    border-spacing: 5px;
-    margin: auto; 
-    font-size: 1.1em;
-    font-family: Trebuchet MS, Arial, helvetica, sans-serif;
-  }
-
-.image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  width: 243px;
-  height: 123px;
-}
 
 
-  contact_text {
+  .contact_text {
     margin: auto;
     text-align: center;
-    align-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: normal;
+    color: white;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: 1.4em;
   }
 
-  a
-  {
-      text-decoration: none;
+  a:link {
+    color: white;
+    text-decoration:none;
   }
-  td:hover {
-    background-color: lightgray;
-    color: #000000;
+
+
+  a:visited {
+    color: white;
+    text-decoration:none;
+  }
+
+  a:active {
+    color: white;
+    text-decoration:none;
+  }
+
+  a:hover {
+    color: gray;
+    text-decoration:none;
   }
 
     /* Remove margins and padding from the list, and add a black background color */
     .contact {
-        font-family: Arial, helvetica, sans-serif;
+        font-family: 'Roboto', helvetica, sans-serif;
         font-size: 1.4em;
         color: black;
         text-align: center;
         align-content: center;
         text-decoration: none;
-        hover:
     }
 
-    .contact a:hover {color: #8B0000}
   
     html, body { 
-    font-family: Trebuchet MS, Arial, helvetica, sans-serif;
+    font-family: 'Roboto', helvetica, sans-serif;
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -66,66 +56,281 @@
 
   
 .about {
-    width: 340px;
+    width: 540px;
     margin: auto;
   }
 
 
 
+  @media screen and (max-width: 600px) {
 
-  .rc_nav {
-    overflow: hidden;
-    text-align: center;
-    z-index: 6;
   }
   
-  .rc_nav a {
-   display: inline-block;
-   margin-right: -4px;  /* inline-block gap fix */
-   color: white;
-   padding: 22px 22px;
-   text-decoration: none;
-   font-family: Trebuchet MS, Arial, helvetica, sans-serif;
-   font-size: 1.4em;
-   -webkit-transition: background 0.3s linear;
-   -moz-transition: background 0.3s linear;
-   -ms-transition: background 0.3s linear;
-   -o-transition: background 0.3s linear;
-   transition: background 0.3s linear;
-   z-index: 9;
-  }
-  
-  /*
-  .rc_nav a:hover {
-    background-color: #575b69;
-    color: #bdfe0e2;
-  }
-  */
-  
-  .rc_nav .icon {
-    display: none;
+  @media screen and (max-width: 6000px) {
+
   }
 
-  @media screen and (max-width: 600px) {
-    .rc_nav a {display: none;}
-    .rc_nav a.icon {
-      float: right;
-      display: block;
-      width: 60px;
-    }
+  .tkadm_responsive {
+  max-width: 330px;
+  height: auto;
+  display: block;
+  padding: 10px;
+  margin-left: Auto;
+  margin-right: Auto;
+  width: 50%;
   }
+
+  .tkadm_responsive hover {
+    color: white;
+  }
+
   
-  @media screen and (max-width: 600px) {
-    .rc_nav.responsive {position: relative; }
-    .rc_nav.responsive .icon {
-      position: fixed;
-      right: 0;
-      top: 0;
+.home-image {
+  background-image: url(Home_Page.jpg); /* The image used */
+  background-color: gray; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.about-image {
+  background-image: url(About.jpg); /* The image used */
+  background-color: gray; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.contact-image {
+  background-image: url(Contact.jpg); /* The image used */
+  background-color: gray; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.audio-reel-image {
+  background-image: url(AUDIO_REEL.jpg); /* The image used */
+  background-color: gray; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media screen and (max-width: 1600px) {
+
+    .About_Text_Main {
+      text-align: left;
+      color: white;
+      font-family: 'Roboto', helvetica, sans-serif;
+      font-size: 1.2em;
+      line-height: 1.4;
+      width: 540px;
+      margin: auto;
     }
-    .rc_nav.responsive a {
-      float: none;
-      display: block;
+    
+    .About_Text_Quote {
       text-align: center;
+      color: white;
+      font-family: 'Roboto', helvetica, sans-serif;
+      font-size: 1.2em;
+      line-height: 1.4;
+      width: 540px;
+      margin: auto;
     }
-  
+
+
+.navigation_white {
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+  text-decoration: none;
+  font-family: 'Roboto', helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+ .navigation{
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+  text-decoration: none;
+  font-family: 'Roboto', helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+}
+
+
+@media screen and (max-width: 580px) {
+
+    .About_Text_Main {
+      text-align: left;
+      color: white;
+      font-family: 'Roboto', helvetica, sans-serif;
+      font-size: 1em;
+      line-height: 1.4;
+      width: 300px;
+      margin: auto;
+    }
+    
+    .About_Text_Quote {
+      text-align: center;
+      color: white;
+      font-family: 'Roboto', helvetica, sans-serif;
+      font-size: 1em;
+      line-height: 1.2;
+      width: 290px;
+      margin: auto;
+    }
+
+
+    .navigation_white {
+      border-width:1px 0;
+      list-style:none;
+      margin:0;
+      padding:0;
+      text-align:center;
+      text-decoration: none;
+      font-family: 'Roboto', helvetica, sans-serif;
+      font-size: 1.0em;
+    }
+
+    .navigation{
+      border-width:1px 0;
+      list-style:none;
+      margin:0;
+      padding:0;
+      text-align:center;
+      text-decoration: none;
+      font-family: 'Roboto', helvetica, sans-serif;
+      font-size: 1.0em;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+
+  .About_Text_Main {
+    text-align: left;
+    color: white;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+    width: 240px;
+    margin: auto;
   }
+  
+  .About_Text_Quote {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+    width: 230px;
+    margin: auto;
+  }
+
+
+  .navigation_white {
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    text-decoration: none;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: 1.0em;
+  }
+
+  .navigation{
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    text-decoration: none;
+    font-family: 'Roboto', helvetica, sans-serif;
+    font-size: 1.0em;
+  }
+
+}
+
+.navigation li{
+  display:inline;
+  color: black;
+}
+.navigation a{
+  display:inline-block;
+  padding:10px;
+  color: black;
+}
+.navigation a:hover{
+  color: white;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+
+.navigation_white li{
+  display:inline;
+  color: white;
+}
+.navigation_white a{
+  display:inline-block;
+  padding:10px;
+  color: white;
+}
+.navigation_white a:hover{
+  color: black;
+}
+
+
+.audio_reel_flex_box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-height: 200vh;
+}
+
+
+.audio_reel_item {
+  width: 300px;
+  height: auto;
+  margin: 5px;
+}
+
+
+.audio_reel {
+  position: relative;
+  font-family: Arial;
+  max-width: 350px;
+}
+
+.audio_reel_text_block {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-align: left;
+  line-height: 0.1;
+  font-family: 'Roboto', helvetica, sans-serif;
+  font-size: 1.0em;
+}
+

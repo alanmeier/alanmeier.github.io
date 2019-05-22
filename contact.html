@@ -3,107 +3,90 @@
 	<head>
 
         <script>
-                /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-                function myFunction() {
-                    var x = document.getElementById("centered_nav");
-                    if (x.className === "rc_nav") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "rc_nav";
-                    }
-                }
-
-
 
         function playAudio(elementid) {
             var sounds = document.getElementsByTagName('audio');
-            for(i=0; i<sounds.length; i++) sounds[i].pause();
-
+            for(i=0; i<sounds.length; i++) {
+                if (sounds[i].id.toLowerCase().indexOf("soundscape") == -1) {
+                    sounds[i].pause();
+                }
+            }
             var audio1 = document.getElementById(elementid);
-            audio1.currentTime = 0;
             audio1.play();
         }
 
         </script>
 
-        <meta name="google-site-verification" content="KNFkmCK8lU5Lu-sXMtPbyxL5QgPyGBX_inpFbcM8w6Q" />
-
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WB8QCPC');</script>
-        <!-- End Google Tag Manager -->
-  
 
 		<title>To Kill A Dead Man</title>
-        <link rel="stylesheet" href="tkadm.css"></link>
+        <link rel="stylesheet" href="tkadm.css">
 		<meta name="ROBOTS" content="INDEX,FOLLOW">
 		<meta name="description" content="Needs description">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     </head>
     
 
 
-	<body>
+	<body class='contact-image'>
 
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB8QCPC"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-
-
-        <div class="rc_nav" id="centered_nav">
-                <a href="about.html"><b>ABOUT</b></a>
-                <a href="audioreel.html"><b>AUDIO REEL</b></a>
-                <a href="contact.html"><b><u>CONTACT</u></b></a>
-                <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+        <div>
+            <a onmouseover="playAudio('TKADM_Logo_Navigation');"  href="tkadm.html"> <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN"></a>
         </div>
-        <a href="tkadm.html"><img class="image" src="TKADM.svg" alt="TO KILL A DEAD MAN" ></a>
+
+        <div class="middle">
+            <ul class="navigation">
+                <li><a onmouseover="playAudio('About_Navigation');" href="about.html">ABOUT</a></li>
+                <li><a onmouseover="playAudio('Audio_Reel_Navigation');" href="audioreel.html">AUDIO REEL</a></li>
+                <li>CONTACT</li>    
+            </ul>
+        </div>
+
+        <div class="Spacer"></div>
+ 
+
 
         <div class="contact_text">
-
-
-                <p class="contact">ALL ENQUIRIES<br>
-                    <a href="mailto:jess@tokilladeadman.com"  onmouseover="playAudio('MailSent');">jess@tokilladeadman.com</a><br><br>
-                    or say hi on social media<br>
-        
-                    <table style="width:240px">
-                            <tr><td onclick="location.href='https://www.instagram.com/2killadeadman/'" onmouseover="playAudio('Instagram');"><a class="contact" href="https://www.instagram.com/2killadeadman/">Instagram</a></td></tr>
-                            <tr><td onclick="location.href='https://www.facebook.com/tokilladeadman/'" onmouseover="playAudio('Facebook');"><a class="contact" href="https://www.facebook.com/tokilladeadman/">Facebook</a></td></tr>
-                            <tr><td onclick="location.href=''" onmouseover="playAudio('Youtube');"><a class="contact" href="">Youtube</a></td></tr>
-                            <tr><td onclick="location.href=''" onmouseover="playAudio('Vimeo');"><a class="contact" href="">Vimeo</a></td></tr>
-                            <tr><td onclick="location.href='https://soundcloud.com/user-817156474'" onmouseover="playAudio('Soundcloud');"><a class="contact" href="https://soundcloud.com/user-817156474">Soundcloud</a></td></tr>
-                         </table>
+                <BR><BR><br><br>
+                <p>To Kill A Dead Man are based in Sydney, Australia</p>
+                <p>For all enquiries please email:<br><br>
+                    <a href="mailto:jess@tokilladeadman.com"  onmouseover="playAudio('Email_Link');">jess@tokilladeadman.com</a>
+                    <br><br>
+                    <a onmouseover="playAudio('Vimeo_Link');" href="https://vimeo.com">Vimeo</a> / <a href="xx" onmouseover="playAudio('Instagram_Link');">Instagram</a> / <a href="xx" onmouseover="playAudio('Facebook_Link');">Facebook</a>
                 </p>
         
         </div>
 
-    <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
+        <div>
 
-    <audio controls autoplay hidden loop="" src="./audio/soundscape_about.wav" type ="audio/wav"">your browser does not support Html5</audio>
+
+        <footer>
+            <div class="contact_text">
+                <br><br><br>
+                <p>Photos by Harleigh English  / Logo design by Daniel Flynn</p>
+            </div>
+        </footer>
+
+        <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
+
+        <audio controls autoplay hidden id="soundscape" loop="" src="./audio/Contact_Soundscape.mp3">your browser does not support Html5</audio>
  
-    <audio controls autoplay hidden loop="" src="./audio/soundscape_about.wav" type ="audio/wav"">your browser does not support Html5</audio>
+  
+        <audio controls  preload="auto"  hidden id="Email_Link" src="./audio/Email_Link.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Facebook_Link" src="./audio/Facebook_Link.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Instagram_Link" src="./audio/Instagram_Link.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Vimeo_Link" src="./audio/Vimeo_Link.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Contact_Navigation" src="./audio/Contact_Navigation.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Audio_Reel_Navigation" src="./audio/Audio_Reel_Navigation.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="TKADM_Logo_Navigation" src="./audio/TKADM_Logo_Navigation.mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="About_Navigation" src="./audio/About_Navigation.mp3"> your browser does not support Html5</audio>
+   
 
-    <audio controls  preload="auto"  hidden id="MailSent" src="./audio/MailSent.m4a" type ="audio/m4a"">your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="Youtube" src="./audio/Youtube.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="Soundcloud" src="./audio/Soundcloud.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="Facebook" src="./audio/Facebook.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="Instagram" src="./audio/Instagram.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="Vimeo" src="./audio/Vimeo.mp3" type ="audio/mp3"">your browser does not support Html5</audio>
 
 </body>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122642417-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-122642417-1');
-</script>
+
 </html>

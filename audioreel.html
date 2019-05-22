@@ -2,90 +2,157 @@
 <html lang="en">
 	<head>
 
-            <script>
-                    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-                    function myFunction() {
-                        var x = document.getElementById("centered_nav");
-                        if (x.className === "rc_nav") {
-                            x.className += " responsive";
-                        } else {
-                            x.className = "rc_nav";
-                        }
-                    }
-    
-    
-    
-            function playAudio(elementid) {
-                var sounds = document.getElementsByTagName('audio');
-                for(i=0; i<sounds.length; i++) sounds[i].pause();
-    
-                var audio1 = document.getElementById(elementid);
-                audio1.currentTime = 0;
-                audio1.play();
+
+        <script>
+
+        function playAudio(elementid) {
+            var sounds = document.getElementsByTagName('audio');
+            for(i=0; i<sounds.length; i++) {
+                if (sounds[i].id.toLowerCase().indexOf("soundscape") == -1) {
+                    sounds[i].pause();
+                }
             }
-    
-            </script>
-    
-            <meta name="google-site-verification" content="KNFkmCK8lU5Lu-sXMtPbyxL5QgPyGBX_inpFbcM8w6Q" />
-    
-            <!-- Google Tag Manager -->
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WB8QCPC');</script>
-            <!-- End Google Tag Manager -->
-      
-    
-            <title>To Kill A Dead Man</title>
-            <link rel="stylesheet" href="tkadm.css"></link>
-            <meta name="ROBOTS" content="INDEX,FOLLOW">
-            <meta name="description" content="Needs description">
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-            <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        </head>
+            var audio1 = document.getElementById(elementid);
+            audio1.play();
+        }
+
+        </script>
+
+		<title>To Kill A Dead Man</title>
+        <link rel="stylesheet" href="tkadm.css">
+        <link href="simplelightbox.css" rel="stylesheet">
+        <script src="build.js"></script>
+        <script src="simplelightbox.js"></script>
+		<meta name="ROBOTS" content="INDEX,FOLLOW">
+		<meta name="description" content="Needs description">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    </head>
         
     
     
-        <body>
+    <body class="audio-reel-image">
+
+
     
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB8QCPC"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-    
-    
-            <div class="rc_nav" id="centered_nav">
-                    <a href="about.html"><b>ABOUT</b></a>
-                    <a href="audioreel.html"><b><u>AUDIO REEL</u></b></a>
-                    <a href="contact.html"><b>CONTACT</b></a>
-                    <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <div>
+
+        <div>
+                <a onmouseover="playAudio('TKADM_Logo_Navigation');"  href="tkadm.html"> <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN"></a>
+        </div>
+
+    <div class="middle">
+        <ul class="navigation">
+            <li><a onmouseover="playAudio('About_Navigation');" href="about.html">ABOUT</a></li>
+            <li><a onmouseover="playAudio('Audio_Reel_Navigation');" href="audioreel.html">AUDIO REEL</a></li>
+            <li><a onmouseover="playAudio('Contact_Navigation');"  href="contact.html">CONTACT</a></li>    
+        </ul>
+    </div>
+
+        <div class="Spacer"></div>
+
+        <p><br></p>
+
+
+        <div class="audio_reel_flex_box">
+                
+                <div class="audio_reel_item">
+                    <div class="audio_reel">
+                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/337648073?autoplay=1">
+                        <img src="UnderArmour.png" alt="Under Armour Advertisement" style="width:100%;"></a>
+                        <div class="audio_reel_text_block"> 
+                            <h4 style="font-style: italic;">Under Amour ‘Together We Will’</h4>
+                            <p>Original Compostion & Sound Design</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="audio_reel_item">
+                    <div class="audio_reel">
+                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/284872207?autoplay=1">
+                        <img src="Boxes_Houses.png" alt="Boxes Houses Music Clip" style="width:100%;"></a>
+                        <div class="audio_reel_text_block">
+                            <h4 style="font-style: italic;">Violet 'Boxes/Houses'</h4>
+                            <p>Compostion, Lyrics, Singing</p>
+                        </div>
+                    </div>
+                </div>
+        
+
+                <div class="audio_reel_item">
+                    <div class="audio_reel">
+                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/323592912?autoplay=1">
+                        <img src="CameronsCorner.png" alt="Camerons Corner Trailer" style="width:100%;"></a>
+                        <div class="audio_reel_text_block">
+                            <h4 style="font-style: italic;">Cameron’s Corner Trailer</h4>
+                            <p>Original Compostion & Sound Design</p>
+                        </div>
+                    </div>
+                </div>
+        
+
+                <div class="audio_reel_item">
+                    <div class="audio_reel">
+                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/318364964?autoplay=1">
+                        <img src="Microsoft.png" alt="Microsoft Promotion" style="width:100%;"></a>
+                        <div class="audio_reel_text_block">
+                            <h4 style="font-style: italic;">Microsoft ‘Anything But Ordinary’</h4>
+                            <p>Original Compostion & Sound Design</p>
+                        </div>
+                    </div>
+                </div>
+        
+
+                <div class="audio_reel_item">
+                    <div class="audio_reel">
+                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/328888862?autoplay=1">
+                        <img src="CultureMachine.png" alt="Culture Machine Showreel" style="width:100%;"></a>
+                        <div class="audio_reel_text_block">
+                            <h4 style="font-style: italic;">Culture Machine ‘2019 Showreel’</h4>
+                            <p>Original Compostion</p>
+                        </div>
+                    </div>
+                </div>
+        
+
+                <div class="audio_reel_item">
+                    <div class="audio_reel">
+                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/322765049?autoplay=1">
+                        <img src="CultureMAchineSelfCare.png" alt="Culture Machine Showreel" style="width:100%;"></a>
+                        <div class="audio_reel_text_block">
+                            <h4 style="font-style: italic;">Culture Machine ‘Self Care’</h4>
+                            <p>Original Compostion</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <a href="tkadm.html"><img class="image" src="TKADM.svg" alt="TO KILL A DEAD MAN" ></a><br>
-    
+
+        </div>
+                <script>
+                    $('.lightBoxVideoLink').simpleLightbox();
+                </script>
+
 
     <div class="Container">
 
 
         <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
-
-        <video class="video" width="672" height="378" controls autoplay>
-                <source src="./audio/video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
    
       
     </div>
+
+        <audio controls  preload="auto"  hidden id="Contact_Navigation" src="./audio/Contact_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Audio_Reel_Navigation" src="./audio/Audio_Reel_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="TKADM_Logo_Navigation" src="./audio/TKADM_Logo_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="About_Navigation" src="./audio/About_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+ 
     </body>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122642417-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122642417-1');
-</script>
 </html>
+
+
+.</p>
