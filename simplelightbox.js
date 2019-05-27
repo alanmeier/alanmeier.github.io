@@ -428,6 +428,7 @@
                 if (matches($target, '.slbCloseBtn') || (self.options.closeOnOverlayClick && matches($target, '.slbWrap'))) {
 
                     self.close();
+                    resumeSoundscape();
 
                 } else if (matches($target, '.slbArrow')) {
 

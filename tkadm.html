@@ -16,6 +16,44 @@
                         var audio1 = document.getElementById(elementid);
                         audio1.play();
                     }
+
+                    function _callback_onAutoplayBlocked() {
+                        // do something, for example "show big play button"
+                    }
+
+                    function isSafari() {
+                        var chr = window.navigator.userAgent.toLowerCase().indexOf("chrome") > -1;
+                        var sfri = window.navigator.userAgent.toLowerCase().indexOf("safari") > -1;
+                        return !chr && sfri;
+                    }
+
+                    function _checkAutoPlay(p) {
+                        var s = window['Promise'] ? window['Promise'].toString() : '';
+
+                        if (s.indexOf('function Promise()') !== -1 || s.indexOf('function ZoneAwarePromise()') !== -1) {
+                            p.catch(function(error) {
+                                console.error("_checkAutoPlay, error:", error)
+                                if(error.name == "NotAllowedError") { // For Chrome/Firefox
+                                    console.error("_checkAutoPlay: error.name:", "NotAllowedError")
+                                    _callback_onAutoplayBlocked();
+                                } else if (error.name == "AbortError" && isSafari()) {  // Only for Safari
+                                    console.error("_checkAutoPlay: AbortError (Safari)")
+                                    _callback_onAutoplayBlocked();
+                                } else {
+                                    console.error("_checkAutoPlay: happened something else ", error);
+                                    // throw error; // happened something else
+                                }
+                            }).then(function(){
+                                console.log("_checkAutoPlay: then");
+                                // Auto-play started
+                            });
+                        } else {
+                            console.error("_checkAutoplay: promise could not work in your browser ", p);
+                        }
+                    }
+
+                    var audio = document.getElementById('soundscape');
+                    _checkAutoPlay(audio.play());
     
             </script>
     
@@ -31,34 +69,43 @@
         
     
     
-     <body class='home-image'>
-    
-        <div>
-          <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN">
-       </div>
-    <div>
+     <body class="home-image">
 
-    <div class="middle">
-        <ul class="navigation">
-            <li><a onmouseover="playAudio('About_Navigation');" href="about.html">ABOUT</a></li>
-            <li><a onmouseover="playAudio('Audio_Reel_Navigation');" href="audioreel.html">AUDIO REEL</a></li>
-            <li><a onmouseover="playAudio('Contact_Navigation');"  href="contact.html">CONTACT</a></li>    
-        </ul>
-    </div>
+            <div>
+                <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN">
+            </div>
 
-    </div>
+            <div class="middle">
+                <ul class="navigation">
+                    <li><a onmouseover="playAudio('About_Navigation');" href="about.html">ABOUT</a></li>
+                    <li><a onmouseover="playAudio('Audio_Reel_Navigation');" href="audioreel.html">AUDIO REEL</a></li>
+                    <li><a onmouseover="playAudio('Contact_Navigation');"  href="contact.html">CONTACT</a></li>    
+                </ul>
+            </div>
+
+
 
  
-    <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
+        <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
 
-    <audio controls autoplay hidden id="soundscape" loop="" src="./audio/Home_Soundscape.mp3">your browser does not support Html5</audio>
- 
 
-  <audio controls  preload="auto"  hidden id="Contact_Navigation" src="./audio/Contact_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="Audio_Reel_Navigation" src="./audio/Audio_Reel_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
-    <audio controls  preload="auto"  hidden id="TKADM_Logo_Navigation" src="./audio/TKADM_Logo_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
-     <audio controls  preload="auto"  hidden id="About_Navigation" src="./audio/About_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
- 
+             <script src="howler.core.min.js" language="JavaScript" type="text/javascript"></script>
+            <script type="text/javascript"><!--
+
+                var sound = new Howl({
+                src: [./audio/Home_Soundscape.m4a', './audio/Home_Soundscape.mp3'],
+                autoplay: true,
+                loop: true,
+                volume: 0.5,
+                });
+
+            --></script>    
+
+        <audio controls  preload="auto"  hidden id="Contact_Navigation" src="./audio/Contact_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Audio_Reel_Navigation" src="./audio/Audio_Reel_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="TKADM_Logo_Navigation" src="./audio/TKADM_Logo_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="About_Navigation" src="./audio/About_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        
     </body>
 
 </html>

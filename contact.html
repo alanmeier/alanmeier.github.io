@@ -30,7 +30,7 @@
     
 
 
-	<body class='contact-image'>
+	<body class='contact-image' style="margin: 0;">
 
         <div>
             <a onmouseover="playAudio('TKADM_Logo_Navigation');"  href="tkadm.html"> <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN"></a>
@@ -40,7 +40,7 @@
             <ul class="navigation">
                 <li><a onmouseover="playAudio('About_Navigation');" href="about.html">ABOUT</a></li>
                 <li><a onmouseover="playAudio('Audio_Reel_Navigation');" href="audioreel.html">AUDIO REEL</a></li>
-                <li>CONTACT</li>    
+                <li><a onmouseover="playAudio('Contact_Navigation');"  href="contact.html">CONTACT</a></li>     
             </ul>
         </div>
 
@@ -63,16 +63,26 @@
 
 
         <footer>
-            <div class="contact_text">
+            <div class="contact_credit_text">
                 <br><br><br>
-                <p>Photos by Harleigh English  / Logo design by Daniel Flynn</p>
+                <p style="color: #ffffff;" >Photos by Harleigh English  / Logo design by Daniel Flynn</p>
             </div>
         </footer>
 
         <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
 
-        <audio controls autoplay hidden id="soundscape" loop="" src="./audio/Contact_Soundscape.mp3">your browser does not support Html5</audio>
- 
+         <script src="howler.core.min.js" language="JavaScript" type="text/javascript"></script>
+            <script type="text/javascript"><!--
+
+                var sound = new Howl({
+                src: ['./audio/Contact_Soundscape.m4a', './audio/Contact_Soundscape.mp3'],
+                autoplay: true,
+                loop: true,
+                volume: 0.5,
+                });
+
+            --></script>
+
   
         <audio controls  preload="auto"  hidden id="Email_Link" src="./audio/Email_Link.mp3"> your browser does not support Html5</audio>
         <audio controls  preload="auto"  hidden id="Facebook_Link" src="./audio/Facebook_Link.mp3"> your browser does not support Html5</audio>

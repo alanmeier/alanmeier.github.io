@@ -5,6 +5,13 @@
 
         <script>
 
+            function pauseAudio() {
+                var sounds = document.getElementsByTagName('audio');
+                for(i=0; i<sounds.length; i++) {
+                    sounds[i].pause();
+                }
+            }
+
         function playAudio(elementid) {
             var sounds = document.getElementsByTagName('audio');
             for(i=0; i<sounds.length; i++) {
@@ -20,22 +27,17 @@
 
 		<title>To Kill A Dead Man</title>
         <link rel="stylesheet" href="tkadm.css">
-        <link href="simplelightbox.css" rel="stylesheet">
-        <script src="build.js"></script>
-        <script src="simplelightbox.js"></script>
+        <link href="lity.min.css" rel="stylesheet">
 		<meta name="ROBOTS" content="INDEX,FOLLOW">
 		<meta name="description" content="Needs description">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+         <script src="jquery.min.js"></script>
+        <script src="lity.min.js"></script>
     </head>
-        
-    
     
     <body class="audio-reel-image">
-
-
     
     <div>
 
@@ -56,94 +58,125 @@
         <p><br></p>
 
 
-        <div class="audio_reel_flex_box">
-                
-                <div class="audio_reel_item">
-                    <div class="audio_reel">
-                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/337648073?autoplay=1">
-                        <img src="UnderArmour.png" alt="Under Armour Advertisement" style="width:100%;"></a>
-                        <div class="audio_reel_text_block"> 
-                            <h4 style="font-style: italic;">Under Amour ‘Together We Will’</h4>
-                            <p>Original Compostion & Sound Design</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="audio_reel_item">
-                    <div class="audio_reel">
-                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/284872207?autoplay=1">
-                        <img src="Boxes_Houses.png" alt="Boxes Houses Music Clip" style="width:100%;"></a>
-                        <div class="audio_reel_text_block">
-                            <h4 style="font-style: italic;">Violet 'Boxes/Houses'</h4>
-                            <p>Compostion, Lyrics, Singing</p>
-                        </div>
-                    </div>
-                </div>
-        
-
-                <div class="audio_reel_item">
-                    <div class="audio_reel">
-                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/323592912?autoplay=1">
-                        <img src="CameronsCorner.png" alt="Camerons Corner Trailer" style="width:100%;"></a>
-                        <div class="audio_reel_text_block">
-                            <h4 style="font-style: italic;">Cameron’s Corner Trailer</h4>
-                            <p>Original Compostion & Sound Design</p>
-                        </div>
-                    </div>
-                </div>
-        
-
-                <div class="audio_reel_item">
-                    <div class="audio_reel">
-                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/318364964?autoplay=1">
-                        <img src="Microsoft.png" alt="Microsoft Promotion" style="width:100%;"></a>
-                        <div class="audio_reel_text_block">
-                            <h4 style="font-style: italic;">Microsoft ‘Anything But Ordinary’</h4>
-                            <p>Original Compostion & Sound Design</p>
-                        </div>
-                    </div>
-                </div>
-        
-
-                <div class="audio_reel_item">
-                    <div class="audio_reel">
-                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/328888862?autoplay=1">
-                        <img src="CultureMachine.png" alt="Culture Machine Showreel" style="width:100%;"></a>
-                        <div class="audio_reel_text_block">
-                            <h4 style="font-style: italic;">Culture Machine ‘2019 Showreel’</h4>
-                            <p>Original Compostion</p>
-                        </div>
-                    </div>
-                </div>
-        
-
-                <div class="audio_reel_item">
-                    <div class="audio_reel">
-                        <a class="lightBoxVideoLink" href="https://player.vimeo.com/video/322765049?autoplay=1">
-                        <img src="CultureMAchineSelfCare.png" alt="Culture Machine Showreel" style="width:100%;"></a>
-                        <div class="audio_reel_text_block">
-                            <h4 style="font-style: italic;">Culture Machine ‘Self Care’</h4>
-                            <p>Original Compostion</p>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="audio_reel_outer_box">
+            <div class="audio_reel_outer_item_shrink">
             </div>
+            <div class="audio_reel_outer_item_grow">
 
+                <div class="audio_reel_flex_box">
+                 
+
+                        <div class="audio_reel_item">
+                            <div class="audio_reel">
+                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/318364964?autoplay=1" data-lity>
+                                <img src="Microsoft.png" alt="Microsoft Promotion" style="width:100%;"></a>
+                                <div class="audio_reel_text_block">
+                                    <h4 style="font-style: italic;">Microsoft ‘Anything But Ordinary’</h4>
+                                    <p>Original Compostion & Sound Design</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="audio_reel_item">
+                            <div class="audio_reel">
+                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/337648073?autoplay=1" data-lity>
+                                <img src="UnderArmour.png" alt="Under Armour Advertisement" style="width:100%;"></a>
+                                <div class="audio_reel_text_block"> 
+                                    <h4 style="font-style: italic;">Under Amour ‘Together We Will’</h4>
+                                    <p>Original Compostion & Sound Design</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="audio_reel_item">
+                            <div class="audio_reel">
+                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/322765049?autoplay=1" data-lity>
+                                <img src="CultureMAchineSelfCare.png" alt="Culture Machine Showreel" style="width:100%;"></a>
+                                <div class="audio_reel_text_block">
+                                    <h4 style="font-style: italic;">Culture Machine ‘Self Care’</h4>
+                                    <p>Original Compostion</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="audio_reel_item">
+                            <div class="audio_reel">
+                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/323592912?autoplay=1" data-lity>
+                                <img src="CameronsCorner.png" alt="Camerons Corner Trailer" style="width:100%;"></a>
+                                <div class="audio_reel_text_block">
+                                    <h4 style="font-style: italic;">‘Cameron’s Corner’ </h4>
+                                    <p>Original Score & Sound Design</p>
+                                </div>
+                            </div>
+                        </div>
+
+ 
+                        <div class="audio_reel_item">
+                            <div class="audio_reel">
+                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/284872207?autoplay=1" data-lity>
+                                <img src="Boxes_Houses.png" alt="Boxes Houses Music Clip" style="width:100%;"></a>
+                                <div class="audio_reel_text_block">
+                                    <h4 style="font-style: italic;">Violet ‘Boxes/Houses’</h4>
+                                    <p>Original Composition & Production</p>
+                                </div>
+                            </div>
+                        </div>
+                               
+
+                        <div class="audio_reel_item">
+                            <div class="audio_reel">
+                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/328888862?autoplay=1" data-lity>
+                                <img src="CultureMachine.png" alt="Culture Machine Showreel" style="width:100%;"></a>
+                                <div class="audio_reel_text_block">
+                                    <h4 style="font-style: italic;">Culture Machine ‘2019 Showreel’</h4>
+                                    <p>Original Compostion</p>
+                                </div>
+                            </div>
+                        </div>
+                
+
+                    </div>
+
+                </div>
+
+
+            <div class="audio_reel_outer_item_shrink">
+            </div>
         </div>
-                <script>
-                    $('.lightBoxVideoLink').simpleLightbox();
-                </script>
 
-
-    <div class="Container">
-
+        <script>
+            $(document).on('lity:close', function(event, instance) {
+                resumeSoundscape();
+            });
+        </script>
 
         <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
    
       
     </div>
+
+    
+             <script src="howler.core.min.js" language="JavaScript" type="text/javascript"></script>
+            <script type="text/javascript"><!--
+
+                var sound = new Howl({
+                src: ['./audio/Audio_Reel_Soundscape.mp3'],
+                autoplay: true,
+                loop: true,
+                volume: 0.5,
+                });
+
+                function pauseSoundscape() {
+                sound.pause();
+            }
+
+            function resumeSoundscape() {
+                sound.play();
+            }
+
+            --></script>  
 
         <audio controls  preload="auto"  hidden id="Contact_Navigation" src="./audio/Contact_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
         <audio controls  preload="auto"  hidden id="Audio_Reel_Navigation" src="./audio/Audio_Reel_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
