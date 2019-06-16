@@ -1,4 +1,96 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  opacity: 0.5;
+  margin: auto;
+  padding: 0;
+  border: 1px solid black;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  font-family: verdana, tahoma, sans-serif;
+  font-size: 19px;
+}
+
+.closebutton {
+  opacity: 0.5;
+  background-color: white; /* Green */
+  border: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: verdana, tahoma, sans-serif;
+  font-size: 19px;
+}
+
+.modal_text {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {bottom:-300px; opacity:0} 
+  to {bottom:0; opacity:0.5}
+}
+
+@keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:0.5}
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-body {
+  padding: 2px 16px;
+  background-color: whitesmoke;
+  opacity: 50%;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: whitesmoke;
+  /* border-top: 1px solid black; */
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+}
 
 body {
   margin: 0
@@ -29,15 +121,7 @@ body {
 
 
   
-    html, body { 
-    font-family: 'Roboto', helvetica, sans-serif;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    background-color: gray;
-    text-align: center;
-    align-content: center;
-  }
+
 
 
   
@@ -53,6 +137,29 @@ body {
     border: none;
   }
 
+  .audio-reel-image {
+    background-image: url(AUDIO_REEL.jpg);
+    background-color: black; /* Used if the image is unavailable */
+    height: 1400px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  html, body { 
+    font-family: 'Roboto', helvetica, sans-serif; 
+    font-display: auto;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    align-content: center;
+  }
+
 
 
 .home-image-old {
@@ -63,6 +170,10 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  -webkit-background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center;
+  -webkit-background-color: gray; /* Used if the image is unavailable */
 }
   
 .home-image {
@@ -70,18 +181,24 @@ body {
   background-color: gray; /* Used if the image is unavailable */
   height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: repeat-y; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
 }
 
 .about-image {
   background-image: url(About.jpg); /* The image used */
-  background-color: black; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
+  background-color: gray; /* Used if the image is unavailable */
+  height: 800px; /* You must set a specified height */
   background-position: center; /* Center the image */
-  background-repeat: repeat-y; /* Do not repeat the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .contact-image {
@@ -89,17 +206,13 @@ body {
   background-color: gray; /* Used if the image is unavailable */
   height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
-  background-repeat: repeat-y; /* Do not repeat the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
-.audio-reel-image {
-  background-image: url(AUDIO_REEL.jpg); /* The image used */
-  background-color: gray; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: repeat-repeat-y; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
+
 
 @media screen and (max-width: 5600px) {
 
@@ -121,9 +234,9 @@ body {
     .About_Text_Main {
       text-align: justify;
       color: white;
-      font-family: 'Roboto', helvetica, sans-serif;
+      font-family: verdana, tahoma, sans-serif;
       font-size: 19px;
-      line-height: 1.1;
+      line-height: 1.2;
       width: 520px;
       margin: auto;
     }
@@ -131,9 +244,9 @@ body {
     .About_Text_Quote {
       text-align: center;
       color: white;
-      font-family: 'Roboto', helvetica, sans-serif;
-      font-size: 19px;
-      line-height: 1.1;
+      font-family: verdana, tahoma, sans-serif;
+      font-size: 17px;
+      line-height: 1.2;
       width: 500px;
       margin: auto;
     }
@@ -167,8 +280,8 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     font-style: normal;
-    color: #E5CEC3;
-    font-family: 'Roboto', helvetica, sans-serif;
+    color: #FFFFDB;
+    font-family: verdana, tahoma, sans-serif;
     font-size: 22px;
   }
 
@@ -176,8 +289,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     font-style: normal;
-    color: #E5CEC3;
-    font-family: 'Roboto', helvetica, sans-serif;
+    color: #FFFFDB;
+    font-family: verdana, tahoma, sans-serif;
     font-size: 14px;
   }
 
@@ -203,9 +316,9 @@ body {
     .About_Text_Main {
       text-align: justify;
       color: white;
-      font-family: 'Roboto', helvetica, sans-serif;
+      font-family: verdana, tahoma, sans-serif;
       font-size: 17px;
-      line-height: 1.0;
+      line-height: 2;
       width: 380px;
       margin: auto;
     }
@@ -213,9 +326,9 @@ body {
     .About_Text_Quote {
       text-align: center;
       color: white;
-      font-family: 'Roboto', helvetica, sans-serif;
-      font-size: 17px;
-      line-height: 1.0;
+      font-family: verdana, tahoma, sans-serif;
+      font-size: 15px;
+      line-height: 1.2;
       width: 380px;
       margin: auto;
     }
@@ -248,8 +361,8 @@ body {
       padding-left: 20px;
       padding-right: 20px;
       font-style: normal;
-      color: #E5CEC3;
-      font-family: 'Roboto', helvetica, sans-serif;
+      color: #FFFFDB;
+      font-family: verdana, tahoma, sans-serif;
       font-size: 18px;
     }
   
@@ -258,8 +371,8 @@ body {
       padding-left: 10px;
       padding-right: 10px;
       font-style: normal;
-      color: #E5CEC3;
-      font-family: 'Roboto', helvetica, sans-serif;
+      color: #FFFFDB;
+      font-family: verdana, tahoma, sans-serif;
       font-size: 10px;
     }
 
@@ -286,9 +399,9 @@ body {
   .About_Text_Main {
     text-align: justify;
     color: white;
-    font-family: 'Roboto', helvetica, sans-serif;
+    font-family: verdana, tahoma, sans-serif;
     font-size: 15px;
-    line-height: 1.0;
+    line-height: 1.2;
     width: 290px;
     margin: auto;
   }
@@ -296,9 +409,9 @@ body {
   .About_Text_Quote {
     text-align: center;
     color: white;
-    font-family: 'Roboto', helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.0;
+    font-family: verdana, tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
     width: 290px;
     margin: auto;
   }
@@ -331,8 +444,8 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     font-style: normal;
-    color: #E5CEC3;
-    font-family: 'Roboto', helvetica, sans-serif;
+    color: #FFFFDB;
+    font-family: verdana, tahoma, sans-serif;
     font-size: 16px;
   }
 
@@ -341,8 +454,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     font-style: normal;
-    color: #E5CEC3;
-    font-family: 'Roboto', helvetica, sans-serif;
+    color: #FFFFDB;
+    font-family: verdana, tahoma, sans-serif;
     font-size: 9px;
   }
 
@@ -440,8 +553,8 @@ body {
   padding-right: 6px;
   text-align: left;
   line-height: 0.1;
-  font-family: 'Roboto', helvetica, sans-serif;
-  font-size: 0.7em;
+  font-family: verdana, 'Roboto', helvetica, sans-serif;
+  font-size: 0.9em;
 }
 
 .about_footer {
@@ -455,9 +568,9 @@ body {
 }
 
 .socialmedia a {
-  color: #E5CEC3;
+  color: #FFFFDB;
 }
 
 .socialmedia p {
-  color: #E5CEC3;
+  color: #FFFFDB;
 }

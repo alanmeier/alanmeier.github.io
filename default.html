@@ -1,62 +1,132 @@
 <!doctype html>
 <html lang="en">
 	<head>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WB8QCPC');</script>
-        <!-- End Google Tag Manager -->
-
-		<title>VIOLET</title>
-        <link rel="stylesheet" href="style.css"></link>
-		<meta name="ROBOTS" content="INDEX,FOLLOW">
-		<meta name="description" content="Violet is an up and coming music artist who works is described as ....">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    </head>
     
+            <title>To Kill A Dead Man</title>
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+            <link rel="stylesheet" href="tkadm.css">
+            <meta name="ROBOTS" content="INDEX,FOLLOW">
+            <meta name="description" content="Needs description">
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB8QCPC"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        </head>
+        
+    
+    
+     <body class="home-image" onload="IsSafari();">
 
-    <div class="Container">
+            <div>
+                <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN">
+            </div>
 
-        <div class="Header">
-            <P><br><img src="Violet.svg" border="0" width=210 height=57><br></P>
+            <div class="middle">
+                <ul class="navigation">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="audioreel.html">AUDIO REEL</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>   
+                </ul>
+            </div>
 
-        </div>
-        <div class="Spacer"></div>
-        <div class="Description">
-            <p>“Under the <b>Violet</b> moniker, Sydney’s Jessica Meier produces textured, <b>cinematic pop</b> that is consistently <a href="TKADM.html"><b>thought-provoking</b>.”</a> <br><i><span class="Aeron">Aeron Clarke, Edge Radio</span></i></p>
-    </div> 
-        <div class="Footer">
-                    <P> <a href="mailto:meier.jess@gmail.com">All Enquiries: Email</a></P>
-                    <!-- <img src="ClickToEmail.svg" border="0" width=245 height=14> -->
-                <h2>
-                    <a href="http://facebook.com/almostviolet" title="Facebook" target="_blank"></a> &nbsp;
-                    <a href="https://www.instagram.com/violet.music/" title="Instagram" target="_blank"></a> &nbsp;
-                    <a href="https://soundcloud.com/almostviolet" title="SoundCloud" target="_blank"></a> &nbsp;
-                    <a href="https://www.youtube.com/channel/UCJvZUHPHIm0n70x2dh6i5ZA" title="YouTube" target="_blank"></a> &nbsp;
-                    <a href="https://open.spotify.com/artist/0p99fbADjgvhwYDP6khOoZ?" title="Spotify" target="_blank"></a> &nbsp;
-                    <a href="https://www.triplejunearthed.com/artist/violet-0" title="JJJ Unearthed" target="_blank"></a> &nbsp;
-                </h2>    
-        </div>
-    </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-body" onclick="hideSafariDialog();">
+                        <p class="modal_text">This website makes noise, please enable sound in your browser settings.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="closebutton" style"opacity: 1;" type="button" onclick="hideSafariDialog();"><b>Close</b></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="howler.core.min.js" language="JavaScript" type="text/javascript"></script>
+            <script type="text/javascript">
+
+                var soundScape = new Howl({
+                src: ['./audio/Home_Soundscape.m4a', './audio/Home_Soundscape.mp3'],
+                autoplay: true,
+                loop: true,
+                volume: 0.5,
+                });
+            </script>  
+ 
+        <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
+
+
+        <audio controls  preload="auto"  hidden id="Contact_Navigation" src="./audio/Contact_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="Audio_Reel_Navigation" src="./audio/Audio_Reel_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="TKADM_Logo_Navigation" src="./audio/TKADM_Logo_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+        <audio controls  preload="auto"  hidden id="About_Navigation" src="./audio/About_Navigation.mp3" type ="audio/mp3"> your browser does not support Html5</audio>
+
+        <script>
+
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+
+            function hideSafariDialog() {
+                modal.style.display = "none";
+            }
+
+ 		function createCookie(cookieName, cookieValue, daysToExpire)
+        {
+          var date = new Date();
+          date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+          document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+        }
+
+		function accessCookie(cookieName)
+        {
+          var name = cookieName + "=";
+          var allCookieArray = document.cookie.split(';');
+          for(var i=0; i<allCookieArray.length; i++)
+          {
+            var temp = allCookieArray[i].trim();
+            if (temp.indexOf(name)==0)
+            return temp.substring(name.length,temp.length);
+       	  }
+        	return "";
+        }
+
+		function checkCookie()
+        {
+          var result = accessCookie("dialogDisplayed");
+          if (result != "")
+            return result;
+          else
+          {
+            // create a cookie and return null so a dialog is displayed
+            createCookie("dialogDisplayed", "Displayed", 1000);
+            return "";
+          }
+        }           
+
+
+        function IsSafari() {
+
+            var siteCookie = checkCookie();
+            var is_safari = (navigator.userAgent.toLowerCase().indexOf('safari') > -1) && (navigator.userAgent.toLowerCase().indexOf('chrome') == -1);
+            if (is_safari == true && siteCookie == "" && soundScape.playing() == false) {
+                // alert("This website makes noise, please enable sound in your browser settings.");
+                modal.style.display = "block";
+            }
+            if (true == false) {
+                modal.style.display = "block";
+            }
+
+            // document.cookie = "dialogDisplayed= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+
+
+    </script>
+
+
     </body>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122642417-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122642417-1');
-</script>
 </html>
+

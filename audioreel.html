@@ -2,15 +2,7 @@
 <html lang="en">
 	<head>
 
-
-        <script>
-
-            function pauseAudio() {
-                var sounds = document.getElementsByTagName('audio');
-                for(i=0; i<sounds.length; i++) {
-                    sounds[i].pause();
-                }
-            }
+        <script async>
 
         function playAudio(elementid) {
             var sounds = document.getElementsByTagName('audio');
@@ -28,31 +20,30 @@
 		<title>To Kill A Dead Man</title>
          <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
         <link rel="stylesheet" href="tkadm.css">
-        <link href="lity.min.css" rel="stylesheet">
+        <link href="lity.min.css" rel="stylesheet"  async>
 		<meta name="ROBOTS" content="INDEX,FOLLOW">
 		<meta name="description" content="Needs description">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-         <script src="jquery.min.js"></script>
-        <script src="lity.min.js"></script>
+        <script src="jquery.min.js"  async></script>
+        <script src="lity.min.js"  async></script>
     </head>
     
     <body class="audio-reel-image">
-    
-    <div>
+
 
         <div>
-                <a onmouseover="playAudio('TKADM_Logo_Navigation');"  href="tkadm.html"> <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN"></a>
+                <a onmouseover="playAudio('TKADM_Logo_Navigation');"  href="default.html"> <img class="tkadm_responsive" src="TKADM.svg" alt="TO KILL A DEAD MAN"></a>
         </div>
 
-    <div class="middle">
-        <ul class="navigation">
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="audioreel.html">AUDIO REEL</a></li>
-            <li><a href="contact.html">CONTACT</a></li>     
-        </ul>
-    </div>
+        <div class="middle">
+            <ul class="navigation">
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="audioreel.html">AUDIO REEL</a></li>
+                <li><a href="contact.html">CONTACT</a></li>     
+            </ul>
+        </div>
 
         <div class="Spacer"></div>
 
@@ -116,11 +107,11 @@
  
                         <div class="audio_reel_item">
                             <div class="audio_reel">
-                                <a onclick="pauseSoundscape();" href="https://player.vimeo.com/video/284872207?autoplay=1" data-lity>
-                                <img src="Boxes_Houses.png" alt="Boxes Houses Music Clip" style="width:100%;"></a>
+                                <a onclick="pauseSoundscape();" href="https://vimeo.com/334567136?autoplay=1" data-lity>
+                                <img src="TinyDisco.png" alt="Tiny Disco ‘Woman’" style="width:100%;"></a>
                                 <div class="audio_reel_text_block">
-                                    <p style="font-style: italic; font-size: 16px;">Violet ‘Boxes/Houses’</p>
-                                     <p style="font-size: 15px;">Original Composition & Production</p>
+                                    <p style="font-style: italic; font-size: 16px;">Tiny Disco ‘Woman’</p>
+                                     <p style="font-size: 15px;">Original Composition & Sound Design</p>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +147,6 @@
         <iframe hidden src="./audio/silence.mp3" allow="autoplay" id="audio"></iframe> 
    
       
-    </div>
 
     
              <script src="howler.core.min.js" language="JavaScript" type="text/javascript"></script>
