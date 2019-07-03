@@ -8,8 +8,29 @@
 
 
 <url>
-  <loc>http://vio-let.com/</loc>
-  <lastmod>2018-08-22T10:26:35+00:00</lastmod>
+  <loc>https://tokilladeadman.com/</loc>
+  <lastmod>2019-07-03T01:28:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tokilladeadman.com/about.html</loc>
+  <lastmod>2019-06-11T09:51:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tokilladeadman.com/audioreel.html</loc>
+  <lastmod>2019-06-11T08:00:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tokilladeadman.com/contact.html</loc>
+  <lastmod>2019-06-11T08:00:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tokilladeadman.com/default.html</loc>
+  <lastmod>2019-07-03T01:28:53+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
